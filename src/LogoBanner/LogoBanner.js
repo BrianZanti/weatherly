@@ -6,7 +6,9 @@ class LogoBanner extends React.Component {
 	
 	render() {
 		return(
-			<h1>This is the LogoBanner</h1>
+			<div className="LogoBanner">
+				<img className="logo" src={logo} alt="logo"/>
+			</div>
 		);
 	}
 }
