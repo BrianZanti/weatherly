@@ -1,0 +1,23 @@
+.SearchBar {	
+	text-align:center;
+	height:2em;
+	padding:1em;
+}
+
+.SearchBox {
+	margin-right:1em;
+	width:50%;	
+	height:2em;
+	text-align:center;
+	border-radius:8px;
+	box-shadow:none;
+}
+
+.SearchButton {
+	background-color:#33BBFF;
+	border:none;
+	height:2em;
+	border-radius:8px;
+	font-weight:bold;
+	color:white;		
+}
