@@ -9,6 +9,9 @@
 # production
 /build
 
+#Weather Underground API Key
+/src/wunderground-api-key.js
+
 # misc
 .DS_Store
 .env.local
