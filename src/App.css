@@ -10,12 +10,3 @@ html {
   font-family: Tahoma, Geneva, sans-serif;  
   color:white;
 }
-
-.WeatherInfoDisplay {
-	background-color:rgba(0,0,0,.25);	
-}
-
-.SearchBarDisplay {
-	background-color:rgba(0,0,0,.5);
-	marin:0em;
-}
