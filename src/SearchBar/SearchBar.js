@@ -5,7 +5,8 @@ class SearchBar extends React.Component {
 
 	constructor(props){
 		super(props);
-		this.state = {value: ""};
+		const savedLocation = localStorage.getItem('location');
+		this.state = {value: savedLocation ? savedLocation : ''};
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 	}
@@ -28,7 +29,7 @@ class SearchBar extends React.Component {
 		return(
 			<div className="SearchBar">
 				<form onSubmit={this.handleSubmit}>
-					<input type="text" placeholder="City or Zip Code" className="SearchBox" onChange={this.handleChange}/>
+					<input type="text" value={this.state.value} placeholder="City or Zip Code" className="SearchBox" onChange={this.handleChange} />
 					<button type="submit" className="SearchButton">Search</button>
 				</form>
 			</div>
