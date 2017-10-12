@@ -10,14 +10,18 @@ class WeatherDisplayControl extends Component {
       searchText: "",
       weatherData: {}
     }
+    this.handleSubmit= this.handleSubmit.bind(this);
   }
 
-  render() {
-    console.log(this.state.searchText);
+  handleSubmit(data) {
+    
+  }
+
+  render() {    
     const content = this.state.searchText ? <CurrentWeather/> : <Welcome />;
     return (
       <div className = "WeatherDisplayControl">
-        <SearchBar />
+        <SearchBar  handleSubmit={this.handleSubmit}/>
         {content}
       </div>
     );
