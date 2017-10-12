@@ -7,21 +7,23 @@ class WeatherDisplayControl extends Component {
   constructor(props){
     super(props);
     this.state = {
-      searchText: "",
+      location: "",
       weatherData: {}
     }
-    this.handleSubmit= this.handleSubmit.bind(this);
+    this.handleLocationUpdate= this.handleLocationUpdate.bind(this);
   }
 
-  handleSubmit(data) {
-    
+  handleLocationUpdate(submittedText) {
+    this.setState({
+      location: submittedText
+    })    
   }
 
   render() {    
-    const content = this.state.searchText ? <CurrentWeather/> : <Welcome />;
+    const content = this.state.location ? <CurrentWeather/> : <Welcome />;
     return (
       <div className = "WeatherDisplayControl">
-        <SearchBar  handleSubmit={this.handleSubmit}/>
+        <SearchBar  handleSubmit={this.handleLocationUpdate}/>
         {content}
       </div>
     );
