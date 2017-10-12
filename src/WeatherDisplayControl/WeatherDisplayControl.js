@@ -6,14 +6,16 @@ import CurrentWeather from '../CurrentWeather/CurrentWeather';
 class WeatherDisplayControl extends Component {
   constructor(props){
     super(props);
+    const savedLocation = localStorage.getItem('location');
     this.state = {
-      location: "",
+      location: savedLocation ? savedLocation : '',
       weatherData: {}
     }
     this.handleLocationUpdate= this.handleLocationUpdate.bind(this);
   }
 
   handleLocationUpdate(submittedText) {
+    localStorage.setItem('location', submittedText);
     this.setState({
       location: submittedText
     })    
