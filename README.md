@@ -4,13 +4,13 @@ CURRENTLY IN DEVLOPMENT MODE ONLY
 * `cd weatherly`
 * `npm install`
 * `npm test`
-* `npm start`
+* `npm start`<br>
 You will have to first add a Weather Underground API key for the test and start functionality to work
 
 ### Adding Weather Underground API key
 * Get your api key from https://www.wunderground.com/weather/api/
 * create file /weatherly/src/wunderground-api-key.js
-* add to wunderground-api-key.js where [YOUR_API_KEY] is the API key given to you by Weather Underground. Note that the API key is a string:
+* add the following code to wunderground-api-key.js where [YOUR_API_KEY] is the API key given to you by Weather Underground. Note that the API key is a string:
 ~~~
 const apiKey = '[YOUR API KEY]';
 export default apiKey; 
