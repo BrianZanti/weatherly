@@ -7,6 +7,7 @@ import $ from 'jquery';
 
 const welcomeMessage = 'Welcome to Weatherly! Get started by searching for your location.';
 const cityNotFoundMessage = "We're sorry, we couldn't find the location you specified.";
+const errorMessage = "We're sorry, we experienced an unexpected error";
 
 class WeatherDisplayControl extends Component {
   constructor(props){
@@ -46,9 +47,7 @@ class WeatherDisplayControl extends Component {
       });      
   }
 
-  apiQuerySuccess(parsed_json){     
-    console.log(parsed_json);
-
+  apiQuerySuccess(parsed_json){         
     if(parsed_json.forecast){                  
       let current_observation = parsed_json.current_observation;            
       let location = parsed_json.location;      
@@ -86,12 +85,18 @@ class WeatherDisplayControl extends Component {
       })
     }
     else{
-      alert("unknown error");
+      this.setState({
+        message: errorMessage,
+        weatherData: {}
+      })
     }      
   }
 
   apiQueryError(parrsed_json){
-    console.log("api query error");
+    this.setState({
+      message : errorMessage,
+      weatherData : {}
+    });
   }
 
   getFormattedDate(){
