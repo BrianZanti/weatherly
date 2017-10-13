@@ -1,5 +1,5 @@
-.CurrentWeather {	
-	background-color:rgba(0,0,0,.25);	
+.CurrentWeather {		
+	
 }
 
 .CityName{
@@ -12,4 +12,10 @@
 
 .CurrentTemperature{
 	font-size:2em;
+}
+
+.HighLow{
+	display:inline;
+	font-size:3em;
+	margin-right:.25em;
 }
