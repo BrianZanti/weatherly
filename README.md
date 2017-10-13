@@ -5,6 +5,6 @@ I really wanted to add functionality to display the suggested names when the cit
 
 ### Wire Frames
 ![Wireframe_page_1](./Wireframe/Page_1.png?raw=true)
-![Wireframe_page_2](./Wireframe/Page_2.png?raw=true)
+![Wireframe_page_2](./Wireframe/Page_3.png?raw=true)
 
 
