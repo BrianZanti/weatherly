@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import './WeatherDisplayControl.css';
-import Welcome from '../Welcome/Welcome';
 import CurrentWeather from '../CurrentWeather/CurrentWeather';
 import apiKey from '../wunderground-api-key';
 import $ from 'jquery';
